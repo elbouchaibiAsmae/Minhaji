@@ -1,6 +1,4 @@
-
-   
-<!DOCTYPE html>  
+<!DOCTYPE html>   
 <html lang="en">
 <head>
     <title>منهاجي</title>
@@ -42,14 +40,22 @@
             cursor: pointer;
             font-size: 20px;
         }
-        .msg-button {
+        .msg-button-container {
+            display: flex;
+            justify-content: center; /* Centre les boutons */
+            gap: 10px; /* Espacement entre les boutons */
             margin-top: 15px;
+        }
+        .msg-button {
             padding: 10px 15px;
             border: none;
             background-color: #4CAF50;
             color: white;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
         }
     </style>
     
@@ -57,7 +63,6 @@
         function closeMsgBox() {
             document.getElementById("msgBox").style.display = "none";
             document.getElementById("msgOverlay").style.display = "none";
-            window.location.href = " https://embed.figma.com/proto/pBURRtce9uSHD9yWth2b6y/Untitled?node-id=1-696&scaling=min-zoom&content-scaling=fixed&page-id=1%3A695&starting-point-node-id=319%3A3549&embed-host=share"; // Remplace par ton lien
         }
     </script>
 </head>
@@ -67,7 +72,10 @@
 <div id="msgBox" class="custom-msg-box">
     <span class="close-btn" onclick="closeMsgBox()">&times;</span>
     <p>Click ici pour adapter l'application au téléphone</p>
-    <button class="msg-button" onclick="closeMsgBox()">Minhaji</button>
+    <div class="msg-button-container">
+        <button class="msg-button" onclick="closeMsgBox()"><i class="fa fa-mobile"></i></button>
+        <button class="msg-button" onclick="closeMsgBox()"><i class="fa fa-laptop"></i></button>
+    </div>
 </div>
 
 <!-- Section Band -->
