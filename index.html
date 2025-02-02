@@ -1,4 +1,6 @@
- <!DOCTYPE html> 
+
+   
+<!DOCTYPE html>  
 <html lang="en">
 <head>
     <title>منهاجي</title>
@@ -7,26 +9,76 @@
     <link rel="icon" href="minhaji.png" type="image/png">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-       <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Intégration de la police Sansita Swashed -->
     <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@700&display=swap" rel="stylesheet">
- 
+    
+    <style>
+        .custom-msg-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+        .msg-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+        .msg-button {
+            margin-top: 15px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+    
+    <script>
+        function closeMsgBox() {
+            document.getElementById("msgBox").style.display = "none";
+            document.getElementById("msgOverlay").style.display = "none";
+            window.location.href = " https://embed.figma.com/proto/pBURRtce9uSHD9yWth2b6y/Untitled?node-id=1-696&scaling=min-zoom&content-scaling=fixed&page-id=1%3A695&starting-point-node-id=319%3A3549&embed-host=share"; // Remplace par ton lien
+        }
+    </script>
 </head>
-<body>    <!-- Section Band -->
-  
+<body>    
+<!-- Message Box -->
+<div id="msgOverlay" class="msg-overlay"></div>
+<div id="msgBox" class="custom-msg-box">
+    <span class="close-btn" onclick="closeMsgBox()">&times;</span>
+    <p>Click ici pour adapter l'application au téléphone</p>
+    <button class="msg-button" onclick="closeMsgBox()">Minhaji</button>
+</div>
+
+<!-- Section Band -->
 <!-- SYSTEME RESPERATOIRE -->
 <div class="w3-container w3-content w3-padding-64" style="max-width:1100px" id="resp">
-
-
   <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="1100px" height="810px" src="https://embed.figma.com/proto/pBURRtce9uSHD9yWth2b6y/Untitled?node-id=1-696&scaling=min-zoom&content-scaling=fixed&page-id=1%3A695&starting-point-node-id=319%3A3549&embed-host=share" allowfullscreen></iframe>
-
 </div>
 
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-
-<p class="w3-medium"> Created by  : <a href="" target="_blank"> EL BOUCHAIBI ASMAE </a></p>
-<p class="w3-medium"> Supervised by : <a href="" target="_blank"> ACHKAOUKAOU MOHAMED</a></p>
+    <p class="w3-medium"> Created by  : <a href="" target="_blank"> EL BOUCHAIBI ASMAE </a></p>
+    <p class="w3-medium"> Supervised by : <a href="" target="_blank"> ACHKAOUKAOU MOHAMED</a></p>
 </footer>
 </body>
 </html>
